@@ -1,0 +1,51 @@
+{
+  "name": "parseStorageUri",
+  "version": "0.0.1",
+  "description": "parses an S3 uri",
+  "main": "src/parseStorageUri.js",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.2.4",
+    "prettier": "^2.4.1",
+    "semantic-release": "^18.0.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__test__/**/*.test.[jt]s?(x)"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint \"src/**/*.js\" \"__test__/**/*.js\""
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Houski/parseStorageUri.git"
+  },
+  "keywords": [
+    "S3"
+  ],
+  "author": "Warren Wilkinson",
+  "private": false,
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Houski/parseStorageUri/issues"
+  },
+  "homepage": "https://github.com/Houski/parseStorageUri#readme"
+}
