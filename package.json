@@ -42,7 +42,6 @@
     "S3"
   ],
   "author": "Warren Wilkinson",
-  "private": false,
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/Houski/parseStorageUri/issues"
