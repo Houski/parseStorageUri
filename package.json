@@ -1,5 +1,5 @@
 {
-  "name": "parseStorageUri",
+  "name": "@houski/parse-storage-uri",
   "version": "0.0.1",
   "description": "parses an S3 uri",
   "main": "src/parseStorageUri.js",
