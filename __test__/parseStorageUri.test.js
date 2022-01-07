@@ -24,7 +24,7 @@ test("s3full", () =>
     accessKey: "accesskey",
     secretKey: "secretkey",
     region: "ca-central-1",
-    bucket: "/bucket-name",
+    bucket: "bucket-name",
   }));
 
 test("s3nosecret", () =>
@@ -33,7 +33,7 @@ test("s3nosecret", () =>
     accessKey: "accesskey",
     secretKey: undefined,
     region: "ca-central-1",
-    bucket: "/bucket-name",
+    bucket: "bucket-name",
   }));
 
 test("s3noregion", () =>
@@ -42,7 +42,7 @@ test("s3noregion", () =>
     accessKey: "accesskey",
     secretKey: "secretkey",
     region: undefined,
-    bucket: "/bucket-name",
+    bucket: "bucket-name",
   }));
 
 test("s3nocred", () =>
@@ -51,7 +51,7 @@ test("s3nocred", () =>
     accessKey: undefined,
     secretKey: undefined,
     region: "ca-central-1",
-    bucket: "/bucket-name",
+    bucket: "bucket-name",
   }));
 
 test("s3justbucket", () =>
@@ -60,7 +60,7 @@ test("s3justbucket", () =>
     accessKey: undefined,
     secretKey: undefined,
     region: undefined,
-    bucket: "/bucket-name",
+    bucket: "bucket-name",
   }));
 
 test("s3nothing", () =>

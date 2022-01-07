@@ -29,7 +29,13 @@ function parseStorageUri(uri) {
   const result =
     source === "local"
       ? { source, path: pathOrBucket }
-      : { source, accessKey, secretKey, region, bucket: pathOrBucket };
+      : {
+          source,
+          accessKey,
+          secretKey,
+          region,
+          bucket: pathOrBucket?.replace(/^\//, ""),
+        };
 
   return result;
 }
