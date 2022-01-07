@@ -44,19 +44,10 @@ jobs:
         with:
           node-version: 15.x
 
-      - name: Login
-        env:
-          NPM_USER: ${{ secrets.NPM_USER }}
-          NPM_PASS: ${{ secrets.NPM_PASS }}
-          NPM_EMAIL: ${{ secrets.NPM_EMAIL }}
-          NODE_ENV: production
-        run: |
-          npm install npm-cli-login -g
-          npm-cli-login
-
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
       - name: Cleanup
