@@ -72,6 +72,19 @@ test("s3nothing", () =>
     bucket: undefined,
   }));
 
+test("s3weirdcharacter", () =>
+  expect(
+    parseStorageUri(
+      "s3://AKIA5VPLS46XZKTZMFWD:bm4my7bjShff0rlYW/88BmkEBPzQ0AsL19rW/LGV@ca-central-1/bucket-name"
+    )
+  ).toEqual({
+    source: "s3",
+    accessKey: "AKIA5VPLS46XZKTZMFWD",
+    secretKey: "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",
+    region: "ca-central-1",
+    bucket: "bucket-name",
+  }));
+
 test("nothing", () => expect(() => parseStorageUri("")).toThrow());
 
 test("unknownTypeShouldError", () =>

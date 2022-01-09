@@ -7,7 +7,7 @@ function parseStorageUri(uri) {
   }
 
   const r =
-    /^(local|s3):\/\/(([^:@\/]+)?(:([^:@\/]+))?)?(@([^@:\/]+))?(\/[^&@:,$=+?:; \\^`><{}\[\]#%"~|]+)?$/i;
+    /^(local|s3):\/\/((([^:@\/]+)?(:([^:@]+))?)?(@([^@:\/]+))?(\/[^&@:,$=+?:; \\^`><{}\[\]#%"~|]+))?$/i;
   const m = uri.match(r);
 
   if (m === null) {
@@ -17,6 +17,7 @@ function parseStorageUri(uri) {
   const [
     fullMatch,
     source,
+    fullNonSource,
     fullCredentials,
     accessKey,
     prefixedSecretKey,
